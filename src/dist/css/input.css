@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: rgb(13 148 136);
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu {
+      transform: scale(0);
+      opacity: 0;
+      transform-origin: top;
+      transition: all 0.5s ease-in;
+    }
+
+    .menu.menu-active {
+      transform: scale(1);
+      opacity: 1;
+      /* transition: all 0.5s ease-in; */
+    }
+  }
+
+  #hero .box h1 {
+    line-height: 1.5;
+    --animate-delay: 0.7s;
+  }
+  #hero .box p {
+    line-height: 2;
+    --animate-delay: 1s;
+  }
+  #hero .box button {
+    line-height: 2;
+    --animate-delay: 1.3s;
+  }
+  #hero .box img {
+    line-height: 2;
+    --animate-delay: 0.7s;
+  }
+
+  .ahref.ibtnn {
+    display: block !important;
+  }
+}
